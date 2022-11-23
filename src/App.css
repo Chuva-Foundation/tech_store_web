@@ -1,0 +1,217 @@
+* {
+
+font-family: 'Roboto', sans-serif;
+font-size: 15px;
+
+
+}
+
+.navbar-container{
+  height: 80px;
+  background:  rgb(25, 10, 29);
+  font-weight: bold;
+  
+}
+
+.wrapper{
+
+  padding: 10px 20px;  
+  display: flex;
+  justify-content: space-between;
+
+}
+#left-nav{
+  flex: 1;
+
+}
+#center-nav{
+  flex: 1;
+  text-align:center;
+  font-weight: bold;
+}
+#center-nav.h1{
+
+  text-align:center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#right-nav{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+#menu-item1, #menu-item2, #menu-item3{
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-top: 4em;
+  background-color: transparent;
+
+}
+
+div.register-form{
+  width: 410px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 50px;
+  border-radius: 20px;
+  margin: 70px auto;
+  background: linear-gradient(0deg, aqua, rgb(151, 12, 190));
+  margin-top: 90px;
+  color: #ebebeb;
+  
+
+}
+.login-form{
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 30px;
+  max-height: 500px;
+  border-radius: 20px;
+  margin: 0 auto;
+  background: linear-gradient(0deg, aqua, rgb(151, 12, 190));
+  margin-top: 100px;
+}
+
+button#register-btn{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 70px;
+  height: 35px;
+  max-width: 600px;
+  margin-top: 0.5em;
+  
+}
+button#login-btn{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 70px;
+  height: 35px;
+  max-width: 600px;
+  margin-top: 1em;
+}
+
+a#register-link{
+  margin: 3.5em;
+}
+a#login-link{
+  margin-top: 3em;
+}
+
+button#account-icon{
+  color: #ebebeb;
+}
+
+div.gender{
+  margin-top: 1em;
+  
+}
+/* #menu-item:hover{
+  background-color:rgb(193, 202, 201);
+  border-radius: 5px;
+}  */
+
+.slide-container{
+  margin-top: 40vh;
+  max-width: 50%;
+  justify-content: center;
+  justify-items: center;
+  margin: 100px auto;
+  
+}
+
+#register-form-title{
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5em;
+
+  
+}
+#login-form-title{
+  text-align: center;
+  font-weight: bold;
+
+}
+#cart-icon{
+  margin-top: -1.3em;
+  font-size:xx-large ;
+  color: #ebebeb;
+}
+h1.nav-title{
+  margin-top: 9px;
+  font-family:fantasy;
+  color: white;
+  font-size:40px;  
+  
+}
+
+/* button#menu-popup{
+  
+} */
+
+div.footer {
+    background: #000000;
+    color: #ebebeb;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: 100;
+    bottom: 0;
+    position:fixed;
+    width: 100%;
+
+}
+.menu {
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 25px;
+    display: inline-flex;
+    color: #ebebeb;
+    text-decoration: none;
+    list-style: none;
+  
+}
+
+.menu li {
+    padding: 5px 10px;
+    border-radius: 3px;
+   
+}
+
+.menu li:hover {
+    text-decoration: none;
+    background: #1f3c58;
+    color: #ebebeb;
+}
+nav.navbar {
+  height: 70px;
+  padding: 15px, 10px;
+  margin-top:-29px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+#avatar{
+  margin-top: 1.3em;
+  color: #ebebeb;
+  font-size:140%;
+  margin-right: 13px;
+  
+    
+}
+.account-menu{
+  color: #ebebeb;
+
+}
+#dropdown-basic-button{
+  background-color: #000000;
+  
+}
+div.each-slide{
+  width: 300px;
+  height: 200px;
+}
