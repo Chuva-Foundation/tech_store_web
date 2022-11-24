@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { createStore } from './store';
-import { Provider } from 'react-redux'; 
+import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore();
 
@@ -13,3 +14,4 @@ root.render(
     <App />
   </Provider>
 );
+reportWebVitals();

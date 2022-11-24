@@ -2,8 +2,7 @@ import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
 import { IconButton } from "@mui/material";
-import PropTypes from 'prop-types'
-import MenuListComposition from "../MenuButton.jsx";
+import MenuButton from "../MenuButton";
 
 
 
@@ -16,7 +15,7 @@ const Navbar = ({title, handleRegisterClick, handleLoginClick, handleCartClick, 
           <div id="left-nav"></div>
           <div id="center-nav"><h1 className="nav-title">{title}</h1></div>      
           <div id="right-nav">
-            <MenuListComposition className="account-menu" />
+            < MenuButton className="account-menu" />
             <span id="menu-item3">
               <IconButton aria-label="cart">
                 <Badge badgeContent={null} color="secondary">
@@ -30,7 +29,7 @@ const Navbar = ({title, handleRegisterClick, handleLoginClick, handleCartClick, 
             <div className="coluna col8">
                     <nav>
                         <ul className="menu inline sem-marcador">
-                            <li onClick={handleHomeClick}>home</li>
+                            <li>home</li>
                             <li>produtos</li>
                             <li>serviços</li>
                             <li>contacto</li>
@@ -44,11 +43,11 @@ const Navbar = ({title, handleRegisterClick, handleLoginClick, handleCartClick, 
 };
 
 //its important to documment the props
-Navbar.propTypes = {
-    title: PropTypes.string.isRequired,
-    handleLoginClick: PropTypes.func.isRequired,
-    handleRegisterClick: PropTypes.func.isRequired,
-    handleCartClick: PropTypes.func.isRequired,
-}
+// Navbar.propTypes = {
+//     title: PropTypes.string.isRequired,
+//     handleLoginClick: PropTypes.func.isRequired,
+//     handleRegisterClick: PropTypes.func.isRequired,
+//     handleCartClick: PropTypes.func.isRequired,
+// }
 
 export default Navbar;

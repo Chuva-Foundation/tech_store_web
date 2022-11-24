@@ -13,13 +13,17 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-    const [nome, setNome] = useState('');
-    const [usuario, setUsuario] = useState('');
+    const [name, setname] = useState('');
+    const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     
-    function handleNome(event)
+    function handleName(event){
+        console.log("dalila");
+        setEmail(event.currentTarget.value);
+
+    }
 
     function handlePassword(event) {
         console.log('EVENT', event);
@@ -32,8 +36,8 @@ const Register = () => {
     }
 
     async function submit() {
-        console.log('Submit', email, password);
-        await dispatch(createSessione({ email, password}));
+        console.log('Submit',name, userName, email, password, );
+        await dispatch(createSession({name, userName, email, password}));
 
         if (success) {
         // redirect to home page
@@ -45,39 +49,40 @@ const Register = () => {
 
     return <div className='container'>
         { isLoading ? <h1>Carregando...</h1> :
-        // <Navbar title = "Labo Móvel" />
-        <div className='register-form'>
-            <form>
-                <h2 id="register-form-title">Regista-se</h2>
-                <div className="mb-1" >
-                    <label for="exampleName" className="form-label">Nome completo</label>
-                    <input type="email" placeholder="Digite seu nome completo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                </div>
-                <div className="mb-1" >
-                    <label for="exampleInputUserName" className="form-label">Usuário</label>
-                    <input type="email" placeholder="Crie seu nome de usuário" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                </div>
-                <div className="mb-1">
-                    <label for="exampleInputEmail1"  class="form-label">Digite seu email</label>
-                    <input type="email" placeholder="Digite o seu email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                </div>
-            
-                <div className="mb-1">
-                    <label for="exampleInputPassword1" className="form-label">Palavra passe</label>
-                    <input type="password" placeholder="Crie a sua palavra-passe" class="form-control" id="exampleInputPassword1" />
+            <div>
+            <Navbar title = "Labo Móvel" /> 
+            <div className='register-form'>
+                <form>
+                    <h2 id="register-form-title">Regista-se</h2>
+                    <div className="mb-1" >
+                        <label for="exampleName" className="form-label">Nome completo</label>
+                        <input type="text" placeholder="Digite seu nome completo" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    </div>
+                    <div className="mb-1" >
+                        <label for="exampleInputUserName" className="form-label">UsuáNameio</label>
+                        <input type="text" placeholder="Crie seu nome de usuário" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    </div>
+                    <div className="mb-1">
+                        <label for="exampleInputEmail1"  className="form-label">Digite seu email</label>
+                        <input type="email" placeholder="Digite o seu email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    </div>
                 
-                </div>
-                <div className="mb-1">
-                    <label for="exampleConfirmPassword1" className="form-label">Confirmar palavra-passe</label>
-                    <input type="Password"  placeholder="Confirme a sua palavra-passe"  class="form-control" id="exampleInputPassword1" />
-                </div>
-                    <a id="register-link" href="/login">Já tenho uma conta</a>        
-                <button type="submit" id="register-btn" class="btn btn-primary">Entrar</button>
-            </form>
-            <Footer />
-        </div>
-
-    }
+                    <div className="mb-1">
+                        <label for="exampleInputPassword1" className="form-label">Palavra passe</label>
+                        <input type="password" placeholder="Crie a sua palavra-passe" className="form-control" id="exampleInputPassword1" />
+                    
+                    </div>
+                    <div className="mb-1">
+                        <label for="exampleConfirmPassword1" className="form-label">Confirmar palavra-passe</label>
+                        <input type="Password"  placeholder="Confirme a sua palavra-passe"  className="form-control" id="exampleInputPassword1" />
+                    </div>
+                        <a id="register-link" href="/login">Já tenho uma conta</a>        
+                    <button type="submit" id="register-btn" className="btn btn-primary" onClick={handleName}>Registar</button>
+                </form>
+                <Footer />
+            </div>
+            </div>
+        }
     </div>
   
 }

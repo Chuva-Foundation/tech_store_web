@@ -6,14 +6,13 @@ import Register from '../pages/Register';
 
 function index() {
 
-
     return (
         <BrowserRouter>
             <Routes>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/' element={<Home/>}/>
-                <Route path='/register' element={<Register/>}/>
-                <Route path='/cart' element={<Register/>}/>
+                <Route path='/register' element={<Register/>}/> 
+                <Route path='/cart' element={<Register/>}/> 
 
             </Routes>
         </BrowserRouter>

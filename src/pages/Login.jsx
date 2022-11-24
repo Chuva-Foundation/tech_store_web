@@ -1,6 +1,6 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../components/Navbar/Navbar';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer';
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
 
   return (
       <>
-        <Navbar title = "Labo Móvel"  />
+        {/* <Navbar title = "Labo Móvel"  /> */}
           <div  className='login-form'>
               <form>
                 <h2 id="login-form-title">Login</h2>

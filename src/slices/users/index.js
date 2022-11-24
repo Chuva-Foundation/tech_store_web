@@ -6,7 +6,7 @@ export const usersSlice = createSlice({
   initialState: {
     loading: false,
     error: null,
-    users: [], 
+    users: null, 
     success: false
   },
   
@@ -37,7 +37,7 @@ export const usersSlice = createSlice({
             success: true,
             loading: false,
             error: null,
-            students: payload
+            users: payload
           };
     },
   },
