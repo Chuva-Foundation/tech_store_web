@@ -62,7 +62,7 @@ const Register = () => {
 
         if (success) {
         // redirect to home page
-        navigate('/home');
+        navigate('/homepage');
         }
         
     }

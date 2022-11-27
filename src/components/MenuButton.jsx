@@ -21,8 +21,8 @@ const handleRegisterClick = () => {
       <Dropdown.Item onClick={handleLoginClick}>Entrar</Dropdown.Item>
       <Dropdown.Item onClick={handleRegisterClick}>Registar</Dropdown.Item>
     </DropdownButton>
+
   );
 }
-
 export default MenuButton;
 

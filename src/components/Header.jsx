@@ -18,7 +18,7 @@ const Header = ({title, handleRegisterClick, handleLoginClick, handleCartClick, 
             <MenuButton />
             <span id="cart-icon">
               <IconButton aria-label="cart">
-                <Badge id="badge" badgeContent={1} color="secondary">
+                <Badge id="badge" badgeContent={null} color="secondary">
                   <ShoppingCartOutlinedIcon id="cart-icon" onClick={handleCartClick}/>
                 </Badge>
               </IconButton>
