@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar';
 import { useNavigate } from 'react-router-dom'
-import Slideshow from '../components/Slideshow';
+import Slideshow from '../components/ImageSlider';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
+import NavMenu from '../components/NavMenu'
 
-
-const Home = () => {
+const HomePage = () => {
 
 const navigate = useNavigate();
 
@@ -26,8 +26,8 @@ const handleCartClick = () => {
   return (
     <div>
         <div>
-          <Navbar title='Labo Móvel' handleLoginClick={handleLoginClick} handleRegisterClick={handleRegisterClick} handleCartClick={handleCartClick} />
-          
+          <Header title='Labo Móvel' handleLoginClick={handleLoginClick} handleRegisterClick={handleRegisterClick} handleCartClick={handleCartClick} />
+          <NavMenu />
         </div>
       
         <div>
@@ -38,6 +38,6 @@ const handleCartClick = () => {
   )
 }
 
-export default Home;
+export default HomePage;
 
 

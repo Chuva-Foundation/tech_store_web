@@ -38,7 +38,7 @@ export const { loading, errorMessage, success } = authSlice.actions
 
 // Middleware
 export const createSession = createAsyncThunk(
-  'auth/create',
+  'user/session',
   async (params, { dispatch }) => {
       try {
           dispatch(loading());
@@ -57,6 +57,30 @@ export const createSession = createAsyncThunk(
           dispatch(errorMessage(error.response.data.error));
       }
   },
+  
 );
 
+
+export const createUser = createAsyncThunk(
+  'user/create',
+  async (params, { dispatch }) => {
+      try {
+          dispatch(loading());
+
+          const response = await axios.post('/sessions', params);
+
+          const token = response.data.token;
+
+          console.log('Token', token);
+
+          axios.defaults.headers.common.Authorization = 'Bearer ' + token;
+
+          dispatch(success());
+      } catch (error) {
+        console.log('ERROR', error);
+          dispatch(errorMessage(error.response.data.error));
+      }
+  },
+
+);
 export default authSlice.reducer
